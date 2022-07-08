@@ -1,17 +1,15 @@
-import React from 'react';
+// импортируем объект из внешней библиотеки;
+// позволяет использовать объект ReactDOM внутри файла index.js;
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
+// ипортируем компонент App
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const container = document.getElementById('root');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// создаем корень приложения для рендеринга
+const root = ReactDOM.createRoot(container);
+
+// отображаем компонент App внутри элемента с id root;
+root.render(<App />);
